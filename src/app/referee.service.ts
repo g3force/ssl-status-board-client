@@ -17,8 +17,8 @@ export class RefereeService {
     return of(this.refereeMsg);
   }
 
-  public createWebSocket(): Subject<MessageEvent> {
-    const socket = new WebSocket('ws://localhost:8080/referee');
+  public createWebSocket(url: string): Subject<MessageEvent> {
+    const socket = new WebSocket(url);
     const observable = Observable.create(
       (o: Observer<MessageEvent>) => {
         socket.onmessage = o.next.bind(o);

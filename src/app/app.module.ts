@@ -1,17 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-import { AppComponent } from './app.component';
-import { ScoreComponent } from './score/score.component';
+import {AppComponent} from './app.component';
 import {RefereeService} from './referee.service';
 import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ScoreComponent
+    AppComponent
   ],
   imports: [
     BrowserModule, HttpClientModule

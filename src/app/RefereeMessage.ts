@@ -11,11 +11,11 @@ export class RefereeMessage {
   GameEvent: GameEvent;
 
 
-  constructor(teamYellow: Team, teamBlue: Team) {
+  constructor() {
     this.Stage = new Stage();
     this.Command = new Command();
-    this.TeamYellow = teamYellow;
-    this.TeamBlue = teamBlue;
+    this.TeamYellow = new Team('y', 0);
+    this.TeamBlue = new Team('b', 0);
     this.GameEvent = new GameEvent();
   }
 }
