@@ -1,44 +1,6 @@
 <div style="text-align:center">
   <h1> SSL Status Board </h1>
 
-  <h2>Stage</h2>
-  <p>
-    Stage: {{refereeMessage.Stage.Name}}<br/>
-    Time left: {{refereeMessage.Stage.TimeLeft}}
-  </p>
-
-  <h2>Command</h2>
-  <p>
-    Command: {{refereeMessage.Command.Name}}
-  </p>
-
-  <h2>Team Blue: {{refereeMessage.TeamBlue.Name}}</h2>
-  <p>
-    Goals: {{refereeMessage.TeamBlue.Goals}}<br/>
-    Timeouts: {{refereeMessage.TeamBlue.Timeouts}}<br/>
-    Timeout Time: {{refereeMessage.TeamBlue.TimeoutTime}}<br/>
-    Red cards: {{refereeMessage.TeamBlue.RedCards}}<br/>
-    Yellow cards: {{refereeMessage.TeamBlue.YellowCards}}<br/>
-    Yellow card times: {{refereeMessage.TeamBlue.YellowCardTimes}}
-  </p>
-
-  <h2>Team Yellow: {{refereeMessage.TeamYellow.Name}}</h2>
-  <p>
-    Goals: {{refereeMessage.TeamYellow.Goals}}<br/>
-    Timeouts: {{refereeMessage.TeamYellow.Timeouts}}<br/>
-    Timeout Time: {{refereeMessage.TeamYellow.TimeoutTime}}<br/>
-    Red cards: {{refereeMessage.TeamYellow.RedCards}}<br/>
-    Yellow cards: {{refereeMessage.TeamYellow.YellowCards}}<br/>
-    Yellow card times: {{refereeMessage.TeamYellow.YellowCardTimes}}
-  </p>
-
-  <h2>Game Event</h2>
-  <p>
-    Type: {{refereeMessage.GameEvent.Type}}<br/>
-    Originating Team: {{refereeMessage.GameEvent.Originator.Team}}<br/>
-    Originating Bot: {{refereeMessage.GameEvent.Originator.BotId}}<br/>
-    Custom message: {{refereeMessage.GameEvent.Message}}
-  </p>
-
-  <input #box type="text" value="{{statusWebSocket}}" (keyup.enter)="onEnter(box.value)" title="Status WebSocket">
+  <app-referee></app-referee>
+  <app-settings></app-settings>
 </div>

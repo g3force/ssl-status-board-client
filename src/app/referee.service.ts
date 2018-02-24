@@ -1,23 +1,42 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {of} from 'rxjs/observable/of';
-import {RefereeMessage} from './RefereeMessage';
 import {Subject} from 'rxjs/Subject';
 import {Observer} from 'rxjs/Observer';
+import {environment} from '../environments/environment';
 
 @Injectable()
 export class RefereeService {
 
-  private refereeMsg: RefereeMessage;
+  private static webSocketKey = 'ssl-status-board-websocket-address';
+
+  socket: Subject<any>;
 
   constructor() {
+    this.reconnect(RefereeService.getStatusWebSocketAddress());
   }
 
-  getRefereeMessage(): Observable<RefereeMessage> {
-    return of(this.refereeMsg);
+  public static getStatusWebSocketAddress() {
+    let statusWebSocket = localStorage.getItem(RefereeService.webSocketKey);
+    if (statusWebSocket == null) {
+      statusWebSocket = environment.defaultStatusWebSocket;
+    }
+    return statusWebSocket;
   }
 
-  public createWebSocket(url: string): Subject<MessageEvent> {
+  public reconnect(statusWebSocket: string) {
+    if (this.socket != null) {
+      this.socket.unsubscribe();
+      this.socket.complete();
+    }
+    this.socket = this.createWebSocket(statusWebSocket);
+  }
+
+  public updateWebSocketAddress(statusWebSocketAddress) {
+    localStorage.setItem(RefereeService.webSocketKey, statusWebSocketAddress);
+    this.reconnect(statusWebSocketAddress);
+  }
+
+  private createWebSocket(url: string): Subject<MessageEvent> {
     const socket = new WebSocket(url);
     const observable = Observable.create(
       (o: Observer<MessageEvent>) => {
