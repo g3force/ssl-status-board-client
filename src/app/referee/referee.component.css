@@ -1,0 +1,68 @@
+div {
+  border: 1px solid black;
+}
+
+.referee-container {
+  text-align: center;
+  font-size: 8vw;
+}
+
+div.team-score-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.team-container {
+  width: 40%;
+  float: left;
+}
+
+div.score-container {
+  width: 20%;
+  float: left;
+}
+
+.team-yellow {
+  color: gold;
+}
+
+.team-blue {
+  color: blue
+}
+
+.team-name {
+  margin-top: 0.1em;
+}
+
+.team-logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.stage-container {
+  width: 100%;
+  display: flex;
+  font-size: 0.3em;
+  margin-top: 0.5em;
+}
+
+.stage-name {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.stage-time {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.game-event-container {
+  width: 100%;
+  font-size: 0.3em;
+  margin-top: 0.5em;
+  text-align: center;
+}
