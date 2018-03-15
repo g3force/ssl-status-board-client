@@ -18,6 +18,7 @@ div.team-container {
 div.score-container {
   width: 20%;
   float: left;
+  font-size: 10vw;
 }
 
 .stage-container {

@@ -10,5 +10,6 @@
   Timeout Time: {{team.TimeoutTime | minuteSeconds}}<br/>
   Red cards: {{team.RedCards}}<br/>
   Yellow cards: {{team.YellowCards}}<br/>
-  Yellow card times: {{team.YellowCardTimes}}
+  Yellow card times:
+  <span *ngFor="let time of team.YellowCardTimes">{{time | minuteSeconds}} </span>
 </div>
