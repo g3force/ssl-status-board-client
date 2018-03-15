@@ -28,3 +28,9 @@ mat-sidenav.mat-closed.mat-locked-open-add-active {
 .settings-container > * {
   width: 100%;
 }
+
+.github {
+  position: absolute;
+  top: 0;
+  right: 0.1em;
+}
