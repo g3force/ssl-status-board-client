@@ -11,3 +11,20 @@ div.sidenav-container {
   top: 0.1em;
   left: 0.1em;
 }
+
+mat-sidenav,
+mat-sidenav.mat-locked-open,
+mat-sidenav.mat-closed.mat-locked-open-add-active {
+  min-width: 200px !important;
+  width: 120vw !important;
+  max-width: 400px !important;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-container > * {
+  width: 100%;
+}
