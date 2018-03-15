@@ -2,17 +2,7 @@
 
   <div class="team-score-container">
     <div class="team-container">
-      <img class="team-logo" src="https://tigers-mannheim.de/res/tigersLogoWithBorderTrans_small.png" alt="team logo"/>
-      <div class="team-name team-blue">{{refereeMessage.TeamBlue.Name}}</div>
-      <!--
-      <div class="team-details">
-        Timeouts: {{refereeMessage.TeamBlue.Timeouts}}<br/>
-        Timeout Time: {{refereeMessage.TeamBlue.TimeoutTime}}<br/>
-        Red cards: {{refereeMessage.TeamBlue.RedCards}}<br/>
-        Yellow cards: {{refereeMessage.TeamBlue.YellowCards}}<br/>
-        Yellow card times: {{refereeMessage.TeamBlue.YellowCardTimes}}
-      </div>
-      -->
+      <app-team [team]="refereeMessage.TeamYellow" [color]="'gold'"></app-team>
     </div>
 
     <div class="score-container">
@@ -20,31 +10,25 @@
     </div>
 
     <div class="team-container">
-      <img src="https://tigers-mannheim.de/res/tigersLogoWithBorderTrans_small.png" alt="team logo" class="team-logo"/>
-      <div class="team-name team-yellow">{{refereeMessage.TeamYellow.Name}}</div>
-      <!--
-      <div class="team-details">
-        Timeouts: {{refereeMessage.TeamYellow.Timeouts}}<br/>
-        Timeout Time: {{refereeMessage.TeamYellow.TimeoutTime}}<br/>
-        Red cards: {{refereeMessage.TeamYellow.RedCards}}<br/>
-        Yellow cards: {{refereeMessage.TeamYellow.YellowCards}}<br/>
-        Yellow card times: {{refereeMessage.TeamYellow.YellowCardTimes}}
-      </div>
-      -->
+      <app-team [team]="refereeMessage.TeamBlue" [color]="'blue'"></app-team>
     </div>
   </div>
 
   <div class="status-container">
     <div class="stage-container">
       <div class="stage-name">{{refereeMessage.Stage.Name}}</div>
-      <div class="stage-time">{{refereeMessage.Stage.TimeLeft}}</div>
+      <div class="stage-time">{{refereeMessage.Stage.TimeLeft | minuteSeconds}}</div>
     </div>
 
     <div class="game-event-container">
     {{refereeMessage.GameEvent.Type}}
-      by {{refereeMessage.GameEvent.Originator.Team}} {{refereeMessage.GameEvent.Originator.BotId}}
-      <br>
-    {{refereeMessage.GameEvent.Message}}
+      <div *ngIf="refereeMessage.GameEvent.Originator.Team != null">
+        by {{refereeMessage.GameEvent.Originator.Team}}
+        <div *ngIf="refereeMessage.GameEvent.Originator.BotId != -1">{{refereeMessage.GameEvent.Originator.BotId}}</div>
+      </div>
+      <p>
+      {{refereeMessage.GameEvent.Message}}
+      </p>
     </div>
 
     <div class="command-container">

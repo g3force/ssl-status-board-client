@@ -11,6 +11,7 @@ export class RefereeComponent implements OnInit {
 
   refereeMessage = new RefereeMessage();
   private refereeService: RefereeService;
+  showDetails: Boolean = false;
 
   constructor(refereeService: RefereeService) {
     this.refereeService = refereeService;
