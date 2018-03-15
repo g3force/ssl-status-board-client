@@ -4,6 +4,6 @@ export class Command {
 
   constructor() {
     this.Id = -1;
-    this.Name = 'unknown';
+    this.Name = 'unknown command';
   }
 }
