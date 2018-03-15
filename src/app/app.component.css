@@ -1,0 +1,13 @@
+div.sidenav-container {
+  border-width: 0;
+}
+
+.main-content {
+  height: 100vh;
+}
+
+.settings-button-container {
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+}

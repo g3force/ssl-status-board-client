@@ -34,19 +34,21 @@
     </div>
   </div>
 
-  <div class="stage-container">
-    <div class="stage-name">{{refereeMessage.Stage.Name}}</div>
-    <div class="stage-time">{{refereeMessage.Stage.TimeLeft}}</div>
-  </div>
+  <div class="status-container">
+    <div class="stage-container">
+      <div class="stage-name">{{refereeMessage.Stage.Name}}</div>
+      <div class="stage-time">{{refereeMessage.Stage.TimeLeft}}</div>
+    </div>
 
-  <div class="game-event-container">
-  {{refereeMessage.GameEvent.Type}}
-    by {{refereeMessage.GameEvent.Originator.Team}} {{refereeMessage.GameEvent.Originator.BotId}}
-    <br>
-  {{refereeMessage.GameEvent.Message}}
-  </div>
+    <div class="game-event-container">
+    {{refereeMessage.GameEvent.Type}}
+      by {{refereeMessage.GameEvent.Originator.Team}} {{refereeMessage.GameEvent.Originator.BotId}}
+      <br>
+    {{refereeMessage.GameEvent.Message}}
+    </div>
 
-  <div>
-  {{refereeMessage.Command.Name}}
+    <div class="command-container">
+    {{refereeMessage.Command.Name}}
+    </div>
   </div>
 </div>

@@ -1,10 +1,10 @@
 div {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .referee-container {
   text-align: center;
-  font-size: 8vw;
+  font-size: 4vw;
 }
 
 div.team-score-container {
@@ -34,6 +34,7 @@ div.score-container {
 
 .team-name {
   margin-top: 0.1em;
+  font-size: 6vw;
 }
 
 .team-logo {
@@ -44,7 +45,6 @@ div.score-container {
 .stage-container {
   width: 100%;
   display: flex;
-  font-size: 0.3em;
   margin-top: 0.5em;
 }
 
@@ -62,7 +62,17 @@ div.score-container {
 
 .game-event-container {
   width: 100%;
-  font-size: 0.3em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   text-align: center;
+}
+
+.command-container {
+  width: 100%;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.status-container {
+  width: 100%;
+  margin-top: 1em;
 }

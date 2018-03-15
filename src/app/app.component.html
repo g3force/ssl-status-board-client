@@ -1,7 +1,22 @@
-<h1> SSL Status Board </h1>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #start (open)="myinput.focus()" mode="over"
+               [fixedInViewport]="fixed" [fixedTopGap]="fixedTop" [fixedBottomGap]="fixedBottom">
 
-<nav>
-  <a routerLink="/status" routerLinkActive="active">Status board</a>
-  <a routerLink="/settings" routerLinkActive="active">Settings</a>
-</nav>
-<router-outlet></router-outlet>
+    <div class="settings-container">
+      <app-settings></app-settings>
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content class="main-content">
+    <div class="settings-button-container">
+      <button mat-icon-button (click)="start.toggle(undefined, 'mouse')">
+        <mat-icon>settings</mat-icon>
+      </button>
+    </div>
+
+    <h1> Small Size League Status Board </h1>
+
+    <app-referee></app-referee>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
