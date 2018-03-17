@@ -30,7 +30,8 @@ mat-sidenav.mat-closed.mat-locked-open-add-active {
 }
 
 .github {
-  position: absolute;
-  top: 0;
-  right: 0.1em;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
