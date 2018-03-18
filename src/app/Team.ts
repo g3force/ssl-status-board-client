@@ -17,5 +17,6 @@ export class Team {
     this.YellowCardTimes = YellowCardTimes;
     this.Timeouts = Timeouts;
     this.TimeoutTime = TimeoutTime;
+    this.logoUrl = 'assets/logos/no-logo.png';
   }
 }

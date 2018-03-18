@@ -25,8 +25,6 @@ export class RefereeComponent implements OnInit {
     const logoBaseName = team.Name.toLowerCase().replace(' ', '-');
     if (this.knownLogos.includes(logoBaseName)) {
       team.logoUrl = 'assets/logos/' + logoBaseName + '.png';
-    } else {
-      team.logoUrl = 'assets/logos/no-logo.png';
     }
   }
 
