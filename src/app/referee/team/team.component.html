@@ -5,8 +5,7 @@
 <div class="team-name" [style.color]="color">{{team.Name}}</div>
 
 <div class="team-details" *ngIf="showDetails">
-  Timeouts: {{team.Timeouts}}<br/>
-  Timeout Time: {{team.TimeoutTime | minuteSeconds}}<br/>
+  Timeouts Left: {{team.Timeouts}} ({{team.TimeoutTime | minuteSeconds}})<br/>
   Red cards: {{team.RedCards}}<br/>
   Yellow cards: {{team.YellowCards}}<br/>
   Yellow card times:

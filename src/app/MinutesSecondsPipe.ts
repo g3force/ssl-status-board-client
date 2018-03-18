@@ -8,7 +8,8 @@ import {String} from 'typescript-string-operations';
 export class MinuteSecondsPipe implements PipeTransform {
 
   transform(value: number): string {
-    const minutes: number = Math.floor(value / 60);
-    return String.Format('{0:0}:{0:00}', minutes, (value - minutes * 60));
+    const seconds: number = Math.round(value / 1000000);
+    const minutes: number = Math.floor(seconds / 60);
+    return String.Format('{0:0}:{1:00}', minutes, (seconds - minutes * 60));
   }
 }

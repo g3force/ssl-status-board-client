@@ -14,7 +14,7 @@ export class RefereeMessage {
   constructor() {
     this.Stage = new Stage();
     this.Command = new Command();
-    this.TeamYellow = new Team('yellow team', 1, 0, 2, [100, 40], 1, 200);
+    this.TeamYellow = new Team('yellow team', 1, 0, 2, [100000000, 40000000], 1, 200000000);
     this.TeamBlue = new Team('blue team', 2, 1, 0, [], 0, 0);
     this.GameEvent = new GameEvent();
   }

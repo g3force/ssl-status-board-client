@@ -7,6 +7,6 @@ export class Stage {
   constructor() {
     this.Id = -1;
     this.Name = 'unknown stage';
-    this.TimeLeft = 100;
+    this.TimeLeft = 100000000;
   }
 }
