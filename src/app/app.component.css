@@ -35,3 +35,19 @@ mat-sidenav.mat-closed.mat-locked-open-add-active {
   bottom: 0;
   width: 100%;
 }
+
+h1 {
+  font-size: 4vw;
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+div.app-header {
+  height: 8%;
+  max-height: 8%;
+}
+
+div.app-body {
+  height: 90%;
+  max-height: 90%;
+}

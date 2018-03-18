@@ -21,14 +21,15 @@
     </div>
 
     <div class="game-event-container">
-    {{refereeMessage.GameEvent.Type}}
-      <div *ngIf="refereeMessage.GameEvent.Originator.Team != null">
+      <div class="game-event-element">{{refereeMessage.GameEvent.Type}}</div>
+      <div class="game-event-element" *ngIf="refereeMessage.GameEvent.Originator.Team != null">
         by {{refereeMessage.GameEvent.Originator.Team}}
-        <div *ngIf="refereeMessage.GameEvent.Originator.BotId != -1">{{refereeMessage.GameEvent.Originator.BotId}}</div>
+        <span
+          *ngIf="refereeMessage.GameEvent.Originator.BotId != -1"> bot {{refereeMessage.GameEvent.Originator.BotId}}</span>
       </div>
-      <p>
+      <div class="game-event-element" *ngIf="refereeMessage.GameEvent.Message != null">
       {{refereeMessage.GameEvent.Message}}
-      </p>
+      </div>
     </div>
 
     <div class="command-container">

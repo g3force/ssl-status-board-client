@@ -8,6 +8,6 @@ export class GameEvent {
   constructor() {
     this.Type = 'unknown game event';
     this.Originator = new Originator();
-    this.Message = '';
+    this.Message = 'custom message';
   }
 }

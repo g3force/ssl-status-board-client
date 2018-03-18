@@ -4,6 +4,6 @@ export class Originator {
 
   constructor() {
     this.Team = 'unknown team';
-    this.BotId = -1;
+    this.BotId = 1;
   }
 }

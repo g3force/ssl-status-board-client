@@ -8,6 +8,7 @@
 
   </mat-sidenav>
   <mat-sidenav-content class="main-content">
+
     <div class="settings-button-container">
       <button mat-icon-button (click)="start.toggle(undefined, 'mouse')">
         <mat-icon>settings</mat-icon>
@@ -21,9 +22,13 @@
         @g3force</a>
     </div>
 
-    <h1> Small Size League Status Board </h1>
+    <div class="app-header">
+      <h1> Small Size League Status Board </h1>
+    </div>
 
-    <app-referee></app-referee>
+    <div class="app-body">
+      <app-referee></app-referee>
+    </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
