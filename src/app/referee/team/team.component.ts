@@ -10,5 +10,4 @@ export class TeamComponent {
 
   @Input('team') team: Team;
   @Input('color') color: string;
-
 }

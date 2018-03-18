@@ -1,5 +1,5 @@
 <button mat-icon-button (click)="showDetails=!showDetails" class="team-logo-button">
-  <img class="team-logo" src="assets/logos/tigers.png" alt="team logo"/>
+  <img class="team-logo" [src]="team.logoUrl" alt="team logo"/>
 </button>
 
 <div class="team-name" [style.color]="color">{{team.Name}}</div>
@@ -9,5 +9,6 @@
   Red cards: {{team.RedCards}}<br/>
   Yellow cards: {{team.YellowCards}}<br/>
   Yellow card times:
+  <!--suppress JSUnusedLocalSymbols -> false positive-->
   <span *ngFor="let time of team.YellowCardTimes">{{time | minuteSeconds}} </span>
 </div>

@@ -6,6 +6,7 @@ export class Team {
   YellowCardTimes: number[];
   Timeouts: number;
   TimeoutTime: number;
+  logoUrl: string;
 
   constructor(Name: string, Goals: number, RedCards: number, YellowCards: number,
               YellowCardTimes: number[], Timeouts: number, TimeoutTime: number) {
