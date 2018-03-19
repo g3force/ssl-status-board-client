@@ -12,7 +12,6 @@ export class RefereeComponent implements OnInit {
 
   refereeMessage = new RefereeMessage();
   private refereeService: RefereeService;
-  showDetails: Boolean = false;
   knownLogos: string[] = ['tigers-mannheim'];
 
   constructor(refereeService: RefereeService) {

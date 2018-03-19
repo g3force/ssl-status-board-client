@@ -12,3 +12,37 @@
   width: 100%;
   height: 100%;
 }
+
+.card {
+  border-radius: 5px;
+  padding: 0.5em;
+  width: 0.7em;
+  height: 1.5em;
+  margin: 0.3em;
+  display: inline-block;
+  font-size: initial;
+  /* IE 7 hack */
+  *zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+}
+
+.yellow-card {
+  background: #e9ea2a;
+}
+
+.red-card {
+  background: #ea1a18;
+}
+
+.timeout {
+  background: azure;
+}
+
+.team-details {
+  font-size: 2vw;
+}
+
+.cards {
+  vertical-align: middle;
+}
