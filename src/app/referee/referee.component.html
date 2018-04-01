@@ -15,11 +15,6 @@
   </div>
 
   <div class="status-container">
-    <div class="stage-container">
-      <div class="stage-name">{{refereeMessage.Stage.Name}}</div>
-      <div class="stage-time">Time left: {{refereeMessage.Stage.TimeLeft | minuteSeconds}}</div>
-    </div>
-
     <div class="game-event-container">
       <div class="game-event-element">{{refereeMessage.GameEvent.Type}}</div>
       <div class="game-event-element" *ngIf="refereeMessage.GameEvent.Originator.Team != null">
@@ -34,6 +29,10 @@
 
     <div class="command-container">
     {{refereeMessage.Command.Name}}
+    </div>
+
+    <div class="stage-container">
+    {{refereeMessage.Stage.Name}} ({{refereeMessage.Stage.TimeLeft | minuteSeconds}})
     </div>
   </div>
 </div>
