@@ -1,6 +1,5 @@
 .referee-container {
   text-align: center;
-  font-size: 3vw;
   height: 100%;
   max-height: 100%;
 }
@@ -26,25 +25,12 @@ div.team-container {
 div.score-container {
   width: 20%;
   float: left;
-  font-size: 5vw;
+  font-size: 1.5em;
 }
 
 .stage-container {
   width: 100%;
   height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stage-name {
-  float: left;
-  width: 50%;
-}
-
-.stage-time {
-  float: left;
-  width: 50%;
 }
 
 .game-event-container {
